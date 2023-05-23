@@ -16,7 +16,17 @@ public class Member {
     private String username;
     private int age;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "team_id")
     private Team team;
+
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id= " + id +
+                ", username = " + username + '\'' +
+                ", age = " + age +
+                ", team = " + team +
+                '}';
+    }
 }
